@@ -1,16 +1,15 @@
-'use client';
+'use client'
 
-import * as React from 'react';
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from 'motion/react'
 
 import {
   getVariants,
-  useAnimateIconContext,
   IconWrapper,
-  type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  useAnimateIconContext,
+  type IconProps
+} from '@/components/animate-ui/icons/icon'
 
-type MenuProps = IconProps<keyof typeof animations>;
+type MenuProps = IconProps<keyof typeof animations>
 
 const animations = {
   default: {
@@ -18,7 +17,7 @@ const animations = {
       initial: {
         rotate: 0,
         x: 0,
-        y: 0,
+        y: 0
       },
       animate: {
         rotate: -45,
@@ -28,27 +27,27 @@ const animations = {
         transition: {
           type: 'spring',
           stiffness: 200,
-          damping: 20,
-        },
-      },
+          damping: 20
+        }
+      }
     },
     line2: {
       initial: {
-        opacity: 1,
+        opacity: 1
       },
       animate: {
         opacity: 0,
         transition: {
           ease: 'easeInOut',
-          duration: 0.2,
-        },
-      },
+          duration: 0.2
+        }
+      }
     },
     line3: {
       initial: {
         rotate: 0,
         x: 0,
-        y: 0,
+        y: 0
       },
       animate: {
         rotate: 45,
@@ -58,28 +57,28 @@ const animations = {
         transition: {
           type: 'spring',
           stiffness: 200,
-          damping: 20,
-        },
-      },
-    },
-  } satisfies Record<string, Variants>,
-} as const;
+          damping: 20
+        }
+      }
+    }
+  } satisfies Record<string, Variants>
+} as const
 
 function IconComponent({ size, ...props }: MenuProps) {
-  const { controls } = useAnimateIconContext();
-  const variants = getVariants(animations);
+  const { controls } = useAnimateIconContext()
+  const variants = getVariants(animations)
 
   return (
     <motion.svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
       strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      strokeLinecap='round'
+      strokeLinejoin='round'
       {...props}
     >
       <motion.line
@@ -88,7 +87,7 @@ function IconComponent({ size, ...props }: MenuProps) {
         x2={20}
         y2={6}
         variants={variants.line1}
-        initial="initial"
+        initial='initial'
         animate={controls}
       />
       <motion.line
@@ -97,7 +96,7 @@ function IconComponent({ size, ...props }: MenuProps) {
         x2={20}
         y2={12}
         variants={variants.line2}
-        initial="initial"
+        initial='initial'
         animate={controls}
       />
       <motion.line
@@ -106,21 +105,22 @@ function IconComponent({ size, ...props }: MenuProps) {
         x2={20}
         y2={18}
         variants={variants.line3}
-        initial="initial"
+        initial='initial'
         animate={controls}
       />
     </motion.svg>
-  );
+  )
 }
 
 function Menu(props: MenuProps) {
-  return <IconWrapper icon={IconComponent} {...props} />;
+  return <IconWrapper icon={IconComponent} {...props} />
 }
 
 export {
+  // eslint-disable-next-line react-refresh/only-export-components
   animations,
   Menu,
   Menu as MenuIcon,
-  type MenuProps,
   type MenuProps as MenuIconProps,
-};
+  type MenuProps
+}

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {
-  SVGMotionProps,
+  type SVGMotionProps,
   useAnimation,
   type LegacyAnimationControls,
   type Variants,
@@ -346,11 +346,15 @@ function getVariants<
 }
 
 export {
+  // eslint-disable-next-line react-refresh/only-export-components
   pathClassName,
+  // eslint-disable-next-line react-refresh/only-export-components
   staticAnimations,
   AnimateIcon,
   IconWrapper,
+  // eslint-disable-next-line react-refresh/only-export-components
   useAnimateIconContext,
+  // eslint-disable-next-line react-refresh/only-export-components
   getVariants,
   type IconProps,
   type IconWrapperProps,
