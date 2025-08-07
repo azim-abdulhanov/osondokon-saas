@@ -58,7 +58,7 @@ const TestimonialsCarousel = () => {
   }
 
   return (
-    <section className='py-20 bg-gray-50 dark:bg-gray-900/20'>
+    <section className='py-20 bg-gray-50 dark:bg-gray-900/20' id='testimonials'>
       <div className='container mx-auto max-w-6xl px-4'>
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

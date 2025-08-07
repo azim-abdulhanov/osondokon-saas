@@ -71,7 +71,7 @@ const plans: Record<'monthly' | 'yearly', Plan[]> = {
 
 export default function Pricing() {
   return (
-    <section className='py-20 bg-gray-50 dark:bg-black'>
+    <section className='py-20 bg-gray-50 dark:bg-black' id='pricing'>
       <div className='text-center mb-12'>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

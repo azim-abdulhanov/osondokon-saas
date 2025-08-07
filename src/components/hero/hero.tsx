@@ -60,7 +60,7 @@ const Hero = () => {
             className='px-8 py-3 text-md font-semibold flex items-center gap-2'
           >
             <PlayCircle size={20} />
-            Book a Demo
+            Demo
           </LiquidButton>
         </motion.div>
 

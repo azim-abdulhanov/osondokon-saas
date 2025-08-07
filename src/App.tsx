@@ -7,6 +7,7 @@ import Navbar from '@/components/navbar/navbar'
 import Pricing from '@/components/pricing/pricing'
 import Testimonials from '@/components/testimonials/testimonials'
 import { ThemeProvider } from '@/components/theme-provider/theme-provider'
+import Footer from '@/components/footer/footer'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <CTA />
           <Contact />
         </main>
+        <Footer />
       </>
     </ThemeProvider>
   )
