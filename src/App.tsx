@@ -3,6 +3,7 @@ import { ThemeProvider } from '@/components/theme-provider/theme-provider'
 import Hero from '@/components/hero/hero'
 import Features from '@/components/features/features'
 import Testimonials from '@/components/testimonials/testimonials'
+import Pricing from '@/components/pricing/pricing'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Hero />
           <Features />
           <Testimonials />
+          <Pricing />
         </main>
       </>
     </ThemeProvider>

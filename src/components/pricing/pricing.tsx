@@ -1,10 +1,19 @@
-'use client'
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
 
-const plans = {
+type Plan = {
+  name: string
+  price: string
+  description: string
+  features: string[]
+  highlight: boolean
+}
+
+const plans: {
+  monthly: Plan[]
+  yearly: Plan[]
+} = {
   monthly: [
     {
       name: 'Starter',
@@ -81,7 +90,7 @@ export default function Pricing() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className='text-gray-600 dark:text-gray-400 mt-4 max-w-xl mx-auto'
         >
-          Sizga mos reja tanlang
+          Choose the plan that's right for you
         </motion.p>
       </div>
 
