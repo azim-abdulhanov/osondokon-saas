@@ -4,6 +4,8 @@ import Hero from '@/components/hero/hero'
 import Features from '@/components/features/features'
 import Testimonials from '@/components/testimonials/testimonials'
 import Pricing from '@/components/pricing/pricing'
+import Faq from '@/components/faq/faq'
+import CTA from '@/components/cta/cta'
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
           <Features />
           <Testimonials />
           <Pricing />
+          <Faq />
+          <CTA />
         </main>
       </>
     </ThemeProvider>

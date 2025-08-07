@@ -10,10 +10,7 @@ type Plan = {
   highlight: boolean
 }
 
-const plans: {
-  monthly: Plan[]
-  yearly: Plan[]
-} = {
+const plans: Record<'monthly' | 'yearly', Plan[]> = {
   monthly: [
     {
       name: 'Starter',
@@ -110,10 +107,10 @@ export default function Pricing() {
           </TabsTrigger>
         </TabsList>
 
-        {['monthly', 'yearly'].map(period => (
+        {(Object.keys(plans) as (keyof typeof plans)[]).map(period => (
           <TabsContent key={period} value={period}>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {plans[period].map((plan, idx) => (
+              {plans[period].map((plan: Plan, idx: number) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 30 }}
@@ -137,7 +134,7 @@ export default function Pricing() {
                     {plan.description}
                   </p>
                   <ul className='space-y-3 mb-6'>
-                    {plan.features.map((feature, i) => (
+                    {plan.features.map((feature: string, i: number) => (
                       <li key={i} className='flex items-center gap-2'>
                         <CheckCircle className='text-green-400 w-5 h-5' />
                         <span>{feature}</span>
