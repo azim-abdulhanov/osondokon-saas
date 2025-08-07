@@ -1,11 +1,12 @@
-import Navbar from '@/components/navbar/navbar'
-import { ThemeProvider } from '@/components/theme-provider/theme-provider'
-import Hero from '@/components/hero/hero'
-import Features from '@/components/features/features'
-import Testimonials from '@/components/testimonials/testimonials'
-import Pricing from '@/components/pricing/pricing'
-import Faq from '@/components/faq/faq'
+import Contact from '@/components/contact/contact'
 import CTA from '@/components/cta/cta'
+import Faq from '@/components/faq/faq'
+import Features from '@/components/features/features'
+import Hero from '@/components/hero/hero'
+import Navbar from '@/components/navbar/navbar'
+import Pricing from '@/components/pricing/pricing'
+import Testimonials from '@/components/testimonials/testimonials'
+import { ThemeProvider } from '@/components/theme-provider/theme-provider'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Pricing />
           <Faq />
           <CTA />
+          <Contact />
         </main>
       </>
     </ThemeProvider>
